@@ -27,7 +27,7 @@ class TmspiderPipeline(object):
         self.connect.close()
 
     def process_item(self, item, spider):
-        sql = '''INSERT INTO tmtest (itemUrl, pid, insertTime, title, cateid, soldMonth, shop, rate, price, originalPrice, commentNum, skuid) VALUES ("%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s");''' % \
+        sql = '''INSERT INTO TMTest (itemUrl, pid, insertTime, title, cateid, soldMonth, shop, rate, price, originalPrice, commentNum, skuid) VALUES ("%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s");''' % \
         (item['itemUrl'], 
         item['pid'], 
         int(time.time()), 
